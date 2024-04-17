@@ -18,4 +18,17 @@ let isMarried = false
 
 // object 
 
-console.log(typeof(undefined));
+// console.log(typeof(undefined));
+
+let score = "33as"
+
+console.log(typeof score); // string output
+
+let value_num = Number(score)
+
+console.log(typeof value_num); // number output
+console.log(value_num); // value is "NaN"
+
+// "33" -> 33
+// "33dsafsd" -> NaN
+// "true" -> 1
