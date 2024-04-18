@@ -36,7 +36,7 @@ let value_num = Number(score)
 // operations on datatypes
 
 let value = 3
-let negValue = -value;
+let negValue = -value; //-3
 
 // console.log(2-"2");
 
@@ -44,8 +44,8 @@ let result = (2+"1" == "2" + 1)
 // console.log(result);
 
 
-console.log(1+ 2+ "3")
-console.log("1"+ 2+ 3)
+console.log(1+ 2+ "3") //33
+console.log("1"+ 2+ 3) //123
 
 // The Login behind this conversion or any coversion of datatypes can be read here : https://tc39.es/ecma262/#sec-toprimitive
 

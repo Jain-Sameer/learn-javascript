@@ -4,12 +4,12 @@
 //  Is JS a dynamic or static typed? Dynamically Typed
 let f_id = 65
 
-let outsideTemp = null
+let outsideTemp = null // not 0
 
 let isMarried = false
 
 let gender // undefined
-let gender_2 = undefined //still undefined
+gender = undefined //still undefined
 
 const id = Symbol('123')
 const anotherId = Symbol('123')

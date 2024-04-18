@@ -27,6 +27,6 @@ console.log((Math.random()*10) + 1);
 const min = 10;
 const max = 20;
 
-let result = Math.floor((Math.random() * (max-min+1)) + (min))
+let result = Math.floor((Math.random() * (max-min+1)) + (min))  // an integer between MIN nd MAX
 
 console.log(result);
