@@ -10,4 +10,4 @@ switch (key) {
 }
 
 //nothing to worry about
-// use break , otherwise it will run every case except defualt until the next break is encountered.
+// use break , otherwise it will run every case except defualt until the next break is encountered.w
