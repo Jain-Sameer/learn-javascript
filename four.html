@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | 4</title>
+</head>
+<body style="background-color: #212121; color: rgb(215, 208, 208);">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(lang_Name){
+        const item = document.createElement('li');
+        item.innerHTML = `${lang_Name}`;
+        document.querySelector(".language").appendChild(item);
+    }
+
+    addLanguage('Python');
+    addLanguage('C++');
+
+    function addOptiLanguage(lang_Name){
+        const item = document.createElement('li');
+        item.appendChild(document.createTextNode(lang_Name));
+        document.querySelector('.language').appendChild(item);
+    }
+    
+    addOptiLanguage("CSS")
+    //edit
+
+    let variable = document.querySelector("li:nth-child(2)");
+    //variable.innerHTML = "English"
+
+    let newLI = document.createElement("li");
+    newLI.textContent = "English"
+
+    variable.replaceWith(newLI)
+
+    //edit
+
+    let firstLang = document.querySelector("li:nth-child(1)")
+    console.log(firstLang.outerHTML);
+
+    firstLang.outerHTML = "<li>Sameer Jain Learning DOM Manipulation</li>"
+
+    //remove
+
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove();
+
+</script>
+</html>
