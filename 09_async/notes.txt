@@ -1,0 +1,15 @@
+Javascript -> 1. Synchronous -> (one by one codes are run)        { Defualt }
+              2. Single Threaded
+
+Execution Context ->
+1. Execute one line of code at a time                           
+2. console log 1            Each operation wiats for the last one to complete before executing.
+3. console log 2
+
+
+Blocking Code vs Non Blocking Code
+
+
+Blocking COde - > Block the flow of the program - > Read File Sync
+
+Non Blocking Code -> Does not block execution -> Read File Async

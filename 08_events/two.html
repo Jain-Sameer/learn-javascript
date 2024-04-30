@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Coffe and Learning</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const sayName = function(){
+        console.log('Sameer');
+    }
+    
+    const changeh1 = function () {
+        document.querySelector('h1').innerHTML = 'Coffee and No Sleep';
+    }
+
+    const changingH1 = setTimeout(changeh1,1000);
+
+    document.querySelector('button').addEventListener('click', stopButton)
+
+    function stopButton() {
+        clearTimeout(changingH1);
+        console.log("Stopped the Change in H1");
+    }
+</script>
+</html>
