@@ -20,13 +20,15 @@ function add(a, b){
 function calculatePrice(...num1){
     return num1
 }
-
-console.log(calculatePrice(100,2000,3000,40000));
+// the values passed are turned into an array, more specifically an object.
+const returnNum = calculatePrice(100,200,300,400)
+console.log( Object.entries(returnNum));
 
 
 function CalculatePrice(a,b,...num1){
     return num1
 }
+
 console.log(CalculatePrice(100,2000,3000,40000));
 
 // the rest operator takes values after a and b and combined the remaining into an array in this case only 3000 and 40000.
@@ -41,11 +43,11 @@ function handleObj(anyobject){
 }
 
 // handleObj(user)
-handleObj(
-    {
-        name: "Howowowo",
-        age: 21
-    }
-)
+// handleObj(
+//     {
+//         name: "Howowowo",
+//         age: 21
+//     }
+// )
 
 // We can also pass array

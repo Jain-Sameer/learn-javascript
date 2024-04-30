@@ -14,3 +14,6 @@
 
 // this is how we can pass arguments in iife functions.
 
+(function addTwo(a, b) {
+    console.log(`result is : ${a+b}`);
+}) (10,20);
