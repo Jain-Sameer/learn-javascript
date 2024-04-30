@@ -3,7 +3,7 @@ const repoCount = 50
 
 console.log(name + repoCount + " hahaha"); // Not prefered, ugly
 
-console.log(`Ny name : ${name} and my repo count is ${repoCount}`); // use back tix `` instead of adding up the values
+console.log(`Ny name : ${name} and my repo count is ${repoCount}`); // use back tix `` instead of concatenating up the values
 
 
 const gameName = new String('WOWOOWW') //Created an object using new keyword, heap used.

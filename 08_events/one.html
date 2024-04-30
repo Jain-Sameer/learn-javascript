@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+    <style>
+        img{
+            width: 200px;
+        }
+    </style>
+</head>
+<body style="background-color: #414141; color: whitesmoke;">
+    <h2>Amazing Images</h2>
+    <div>
+        <ul id="images">
+            <li><img src="https://images.pexels.com/photos/305197/pexels-photo-305197.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="dog" id="dog" ></li>
+            <li><img src="https://images.pexels.com/photos/1309326/pexels-photo-1309326.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" id="grafitti"></li>
+            <li><img src="https://images.pexels.com/photos/305197/pexels-photo-305197.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" id="cat"></li>
+            <li><img src="https://images.pexels.com/photos/1309326/pexels-photo-1309326.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" id="scene"></li>
+            <li><img src="https://images.pexels.com/photos/100582/pexels-photo-100582.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" id="bike"></li>
+            <li></li><a href="https://google.com" id="google" >Google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    // document.getElementById('owl').onclick = function(){
+    //     alert('WOWO');
+    // } //less features 
+
+    // document.getElementById('cat').addEventListener('click', function () {
+    //     alert('CAT');
+    //  } , false)  // default false, it is v. imp as some applications in interviews are such that they are not completed without using true.false
+
+    // attachEvent()
+    // jQoury -> on
+
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log('clicked inside the ul');
+    // }, false) // this false/true is used in event propagation, event bubbling (false), event capturing (true) must learn
+    // // type, timestamp, defaultPrevented
+    // //  target, toElement, srcElement, current Traget
+    // // clientX, clientY, screenX, screenY
+    // // altkey, ctrlkey, shiftkey, keyCode
+    // document.getElementById('dog').addEventListener('click', function(e){
+    //     console.log('owl clicked');
+    //     e.stopPropagation();
+    // },false)
+ // bubbling -> elements are tracked from inside out, child first then parent.
+ // capturing -> reverse of bubbling
+
+ // if we are in need of only the inner element, we can use stopPropagation() method to track only the inside child.
+
+ // defaultPrevemted
+
+    // document.getElementById('google').addEventListener("click", function(e){
+    //     console.log('Google Clicked');
+    //     e.preventDefault();
+    //     e.stopPropagation();
+    // }, false)
+
+
+    // the image which is clicked gets disappeared
+    document.querySelector('#images').addEventListener('click', function(e){
+        // console.log(e.target.parentNode);
+
+        console.log(e.target.tagName);
+
+        if (e.target.tagName === 'IMG') {
+            let removeIt = e.target.parentNode
+        removeIt.remove(); 
+        }
+
+        
+        // if we press on anything except the content of li, the whole UL is getting disappeared, for that reason we can use tagName which returns which thing we are clicking on, and by using if else statements we can choose only img tags img tags to be removed.
+
+        // removeIt.parentNode.removeChild(removeIt);
+    },false)
+</script>
+</html>
