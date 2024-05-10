@@ -111,15 +111,12 @@ const promise5 = new Promise(function (resolve, reject) {
 // consumeP5()
 
 async function getAllUsers(){
-    try {
-    const URL = 'https://jsonplaceholder.typicode.com/users'
-    const response = fetch(URL)
+    
+    const response = await fetch('https://api.github.com/users/hiteshchoudhary')
     console.log(response);
     const data = response.json()
     console.log(data);
-    } catch (error) {
-        console.log('E: '+ error);
-    }
+   
 }
 
 getAllUsers()
