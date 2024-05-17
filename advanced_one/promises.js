@@ -1,15 +1,15 @@
 // fetch('https://google.com').then().catch().finally()
 // Promise 1
-// const promise1 = new Promise(
-//     function (resolve,reject) {
-//        // Do an async task
-//        // Like DB calls, CryptoGraphy, Network related calls
-//        setTimeout(function(){
-//         console.log('Async Complete');
-//         resolve(); // this is must to get the acknowledgement from then function.
-//        }, 1000) 
-//     }
-// );
+const promise1 = new Promise(
+    function (resolve,reject) {
+       // Do an async task
+       // Like DB calls, CryptoGraphy, Network related calls
+       setTimeout(function(){
+        console.log('Async Complete');
+        resolve(); // this is must to get the acknowledgement from then function.
+       }, 1000) 
+    }
+);
 // then -> connected to resolve
 // promise1.then(function () {
 //     console.log('Promise Consumed');

@@ -22,3 +22,4 @@ fetch('https://api.github.com/users/hiteshchoudhary')
 .finally()
 
 //fetch , when we see in the terminal the outputs other asyncs and awaits are being displayed after the fetch output. :O
+//  this is because fetch creates a priority queue like special queue which executes before the task queue 
